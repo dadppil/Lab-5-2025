@@ -316,8 +316,7 @@ public class LinkedListTabulatedFunction implements TabulatedFunction {
             FunctionNode node = this.head.next;
             FunctionNode Thatnode = arrayThat.head.next;
             for (int i = 0; i < pointsCount; i++) {
-                if (Math.abs(node.point.getX() - Thatnode.point.getX()) >= EPSILON ||
-                        Math.abs(node.point.getY() - Thatnode.point.getY()) >= EPSILON) {
+                if (!Thatnode.point.equals(node.point)) {
                     return false;
                 }
                 node = node.next;

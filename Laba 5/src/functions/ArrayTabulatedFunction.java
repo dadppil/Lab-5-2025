@@ -224,8 +224,7 @@ public class ArrayTabulatedFunction implements TabulatedFunction {
 
 
             for (int i = 0; i < pointsCount; i++) {
-                if (Math.abs(this.points[i].getX() - arrayThat.points[i].getX()) >= EPSILON ||
-                        Math.abs(this.points[i].getY() - arrayThat.points[i].getY()) >= EPSILON) {
+                if (!arrayThat.points[i].equals(this.points[i])) {
                     return false;
                 }
             }

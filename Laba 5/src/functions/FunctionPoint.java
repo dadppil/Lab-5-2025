@@ -45,8 +45,8 @@ public class FunctionPoint implements Serializable,Cloneable {
 
         FunctionPoint that = (FunctionPoint) o;
 
-        return Math.abs(this.x - that.x) <= EPSILON &&
-                Math.abs(this.y - that.y) <= EPSILON;
+        return Double.compare(this.x, that.x) == 0 &&
+                Double.compare(this.y, that.y) == 0;
     }
     @Override
     public int hashCode(){
